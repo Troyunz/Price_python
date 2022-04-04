@@ -1,0 +1,20 @@
+.mycontent{
+    padding-top: 10%;
+}
+
+.part-name {
+    text-align: center;
+    padding: 2%;
+}
+
+.part-name:hover {
+    background-color: lightgray;
+}
+
+.part-text {
+    margin: 7%;
+}
+
+.storage-table {
+    margin: 5%;
+}

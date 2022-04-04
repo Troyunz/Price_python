@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mycontent">
+  <div class="row justify-content-md-center">
+
+    <div class="col-lg-3 col-md-4 col-sm-4 mb-1  part-name">
+      <img src="/static/cpu.svg" height="200" width="200" />
+      <div class="part-text">
+        <h4>CPU</h4>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
+      <img src="/static/ram.svg" height="200" width="200" />
+      <div class="part-text">
+        <h4>MEMORY</h4>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
+      <a href="{{ url_for('storage') }}" class="text-reset text-decoration-none">
+        <img src="/static/storage.svg" height="200" width="200" />
+        <div class="part-text">
+          <h4>STORAGE</h4>
+        </div>
+      </a>
+    </div>
+
+  </div><!-- end row -->
+</div><!-- end container -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4 box">
+      <img src="/static/cpu.svg" />
+    </div>
+    <div class="col-md-4 box">
+      <img src="/static/ram.svg" />
+    </div>
+    <div class="col-md-4 box">
+      <img src="/static/gpu.svg" />
+    </div>
+  </div>
+</div> -->
+{% endblock body %}
