@@ -16,7 +16,7 @@ class Price(db.Model):
     url = db.Column(db.String(200), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f"{self.sno} - {self.price}"
 
 @app.route('/', methods=['GET', 'POST'])
