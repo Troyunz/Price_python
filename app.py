@@ -17,7 +17,7 @@ class Price(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self) -> str:
-        return f"{self.sno} - {self.title}"
+        return f"{self.sno} - {self.price}"
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
