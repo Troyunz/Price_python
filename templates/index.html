@@ -6,17 +6,21 @@
   <div class="row justify-content-md-center">
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1  part-name">
-      <img src="/static/cpu.svg" height="200" width="200" />
-      <div class="part-text">
-        <h4>CPU</h4>
-      </div>
+      <a href="{{ url_for('cpu') }}" class="text-reset text-decoration-none">
+        <img src="/static/cpu.svg" height="200" width="200" />
+        <div class="part-text">
+          <h4>CPU</h4>
+        </div>
+      </a>
     </div>
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
-      <img src="/static/ram.svg" height="200" width="200" />
-      <div class="part-text">
-        <h4>MEMORY</h4>
-      </div>
+      <a href="{{ url_for('memory') }}" class="text-reset text-decoration-none">
+        <img src="/static/ram.svg" height="200" width="200" />
+        <div class="part-text">
+          <h4>MEMORY</h4>
+        </div>
+      </a>
     </div>
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
