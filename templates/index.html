@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<div class="container heading-div heading-main-page">
+  <h2 >Categories</h2>
+  <h4>Choose a product category</h4>
+</div>
 <div class="container mycontent">
+  <hr class="solid" style="margin-top: 2%;">
   <div class="row justify-content-md-center">
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1  part-name">
       <a href="{{ url_for('cpu') }}" class="text-reset text-decoration-none">
-        <img src="/static/cpu.svg" height="200" width="200" />
+        <div class="part-image">
+          <img src="/static/cpu.svg" height="100" width="100" />
+        </div>
         <div class="part-text">
           <h4>CPU</h4>
         </div>
@@ -16,7 +22,9 @@
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
       <a href="{{ url_for('memory') }}" class="text-reset text-decoration-none">
-        <img src="/static/ram.svg" height="200" width="200" />
+        <div class="part-image">
+          <img src="/static/ram.svg" height="100" width="100" />
+        </div>
         <div class="part-text">
           <h4>MEMORY</h4>
         </div>
@@ -25,7 +33,9 @@
 
     <div class="col-lg-3 col-md-4 col-sm-4 mb-1 part-name">
       <a href="{{ url_for('storage') }}" class="text-reset text-decoration-none">
-        <img src="/static/storage.svg" height="200" width="200" />
+        <div class="part-image">
+          <img src="/static/storage.svg" height="100" width="100" />
+        </div>
         <div class="part-text">
           <h4>STORAGE</h4>
         </div>

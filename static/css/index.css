@@ -1,10 +1,11 @@
 .mycontent{
-    padding-top: 10%;
+    padding-top: 1%;
 }
 
 .part-name {
     text-align: center;
     padding: 2%;
+    justify-content: center;
 }
 
 .part-name:hover {
@@ -12,9 +13,43 @@
 }
 
 .part-text {
-    margin: 7%;
+    text-align: right;
+    margin-left: 5%;
+    float: left;
+    padding-top: 14%;
+    padding-left: 5%;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 900;
+}
+
+.part-image {
+    float: left;
+    text-align: left;
 }
 
 .storage-table {
     margin: 5%;
+}
+
+.heading {
+    margin-top: 3%;
+    text-align: center;
+    justify-content: center;
+    font-style: oblique;
+}
+
+.heading-main-page {
+    margin-top: 1%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    justify-content: center;
+    font-style: oblique;
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+.heading-div {
+    text-align: center;
+    justify-content: center;
 }
