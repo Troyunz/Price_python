@@ -137,22 +137,22 @@ def home():
 @app.route('/storage')
 def storage():
     # if request.method=='POST':
-    req = requests.get("https://scrapedcb-node-deploy.herokuapp.com/getstorage")
-    data = json.loads(req.content)
-    for i in range(len(data)):
-        title =  data[i]['title']
-        sku = data[i]['sku']
-        stock = data[i]['stock']
-        price = data[i]['price']
-        site = data[i]['site']
-        price = price.replace('₹', '')
-        price = price.replace(',', '')
-        price = float(price)
-        url = data[i]['url']
-        # desc = request.form['desc']
-        prices = Storage(products=title, price=price, url=url, sku=sku, stock=stock, site=site)
-        db.session.add(prices)
-        db.session.commit()
+    # req = requests.get("https://scrapedcb-node-deploy.herokuapp.com/getstorage")
+    # data = json.loads(req.content)
+    # for i in range(len(data)):
+    #     title =  data[i]['title']
+    #     sku = data[i]['sku']
+    #     stock = data[i]['stock']
+    #     price = data[i]['price']
+    #     site = data[i]['site']
+    #     price = price.replace('₹', '')
+    #     price = price.replace(',', '')
+    #     price = float(price)
+    #     url = data[i]['url']
+    #     # desc = request.form['desc']
+    #     prices = Storage(products=title, price=price, url=url, sku=sku, stock=stock, site=site)
+    #     db.session.add(prices)
+    #     db.session.commit()
         
     # print(len(data))
     allPrice = Storage.query.all() 
@@ -161,22 +161,22 @@ def storage():
 @app.route('/cpu')
 def cpu():
     # if request.method=='POST':
-    req = requests.get("https://scrapedcb-node-deploy.herokuapp.com/getprocessor")
-    data = json.loads(req.content)
-    for i in range(len(data)):
-        title =  data[i]['title']
-        sku = data[i]['sku']
-        stock = data[i]['stock']
-        site = data[i]['site']
-        price = data[i]['price']
-        price = price.replace('₹', '')
-        price = price.replace(',', '')
-        price = float(price)
-        url = data[i]['url']
-        # desc = request.form['desc']
-        prices = Processor(products=title, price=price, url=url, sku=sku, stock=stock, site=site)
-        db.session.add(prices)
-        db.session.commit()
+    # req = requests.get("https://scrapedcb-node-deploy.herokuapp.com/getprocessor")
+    # data = json.loads(req.content)
+    # for i in range(len(data)):
+    #     title =  data[i]['title']
+    #     sku = data[i]['sku']
+    #     stock = data[i]['stock']
+    #     site = data[i]['site']
+    #     price = data[i]['price']
+    #     price = price.replace('₹', '')
+    #     price = price.replace(',', '')
+    #     price = float(price)
+    #     url = data[i]['url']
+    #     # desc = request.form['desc']
+    #     prices = Processor(products=title, price=price, url=url, sku=sku, stock=stock, site=site)
+    #     db.session.add(prices)
+    #     db.session.commit()
         
     # print(len(data))
     allPrice = Processor.query.all() 
@@ -355,4 +355,4 @@ def delete(sno):
     return redirect("/")
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=True, port=8000)
