@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="heading">Graphics Card</h2>
+<div class="container storage-table">
+  <table class="table table-hover" id="priceStorage">
+    <thead>
+      <tr>
+        <th scope="col"><a href="#" class="text-reset text-decoration-none">Sno.</a></th>
+        <th scope="col"><a href="#" class="text-reset text-decoration-none">Product</a></th>
+        <th scope="col"><a href="#" class="text-reset text-decoration-none">Site</a></th>
+        <th scope="col"><a href="#" class="text-reset text-decoration-none"> Price in ₹ </a></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+      {% if item.stock == "In stock" %}
+      <tr class="clickable">
+        <th scope="row">{{loop.index}}</th>
+        <td><a href="{{ item.url }}" class="text-reset text-decoration-none" target="_blank">{{item.products}}</a></td>
+        {% if "mdcomp" == item.site %}
+        <td><img src="/static/mdcompures.svg" height="50" width="150" /></td>
+        {% elif item.site == "vedant" %}
+        <td><img src="/static/vedant.svg" height="50" width="150" /></td>
+        {% elif item.site == "primegb" %}
+        <td><img src="/static/primeabgb.svg" height="50" width="150" /></td>
+        {% elif item.site == "theitdepot" %}
+        <td><img src="/static/The-IT-Depot.svg" height="50" width="150" /></td>
+        {% else %}
+        <td>{{item.site}}</td>
+        {% endif %}
+        <td>{{item.price}}</td>
+      </tr>
+      {% else %}
+      <tr class="clickable table-danger">
+        <th scope="row">{{loop.index}}</th>
+        <td><a href="{{ item.url }}" class="text-reset text-decoration-none" target="_blank">{{item.products}}</a></td>
+        {% if "mdcomp" == item.site %}
+        <td><img src="/static/mdcompures.svg" height="50" width="150" /></td>
+        {% elif item.site == "vedant" %}
+        <td><img src="/static/vedant.svg" height="50" width="150" /></td>
+        {% elif item.site == "primegb" %}
+        <td><img src="/static/primeabgb.svg" height="50" width="150" /></td>
+        {% elif item.site == "theitdepot" %}
+        <td><img src="/static/The-IT-Depot.svg" height="50" width="150" /></td>
+        {% else %}
+        <td>{{item.site}}</td>
+        {% endif %}
+        <td>{{item.price}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock body %}
